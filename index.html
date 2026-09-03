@@ -19,14 +19,12 @@
             overflow-x: hidden;
         }
         
-        /* Glitter animation */
         @keyframes glitter {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* Classic Early 2000s Scrolling Text */
         marquee {
             font-family: 'Monoton', cursive;
             font-size: 2em;
@@ -45,7 +43,6 @@
             margin-bottom: 10px;
         }
 
-        /* The Britney Blink Effect */
         .britney-bitch {
             font-family: 'Monoton', cursive;
             font-size: 1.8em;
@@ -56,7 +53,6 @@
         }
         @keyframes blink { 50% { opacity: 0; } }
 
-        /* Spinning CD */
         .cd {
             width: 150px;
             height: 150px;
@@ -68,7 +64,6 @@
         }
         @keyframes spin { 100% { transform: rotate(360deg); } }
 
-        /* Flip Phone Box */
         .flip-phone {
             background: silver;
             color: black;
@@ -83,7 +78,6 @@
             box-shadow: 0 10px 10px rgba(0,0,0,0.5);
         }
 
-        /* Singer Cards */
         .stars {
             display: flex;
             justify-content: center;
@@ -103,9 +97,24 @@
             font-size: 1.5em;
         }
 
+        .card img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ff00cc;
+            box-shadow: 0 0 15px #ff00cc, 0 0 30px #ff00cc;
+            filter: saturate(180%) contrast(110%) drop-shadow(0 0 5px #00ccff);
+            animation: glow-pulse 2s infinite alternate;
+        }
+
+        @keyframes glow-pulse {
+            from { box-shadow: 0 0 10px #ff00cc; filter: saturate(150%) contrast(100%); }
+            to { box-shadow: 0 0 30px #00ccff, 0 0 40px #ff00cc; filter: saturate(220%) contrast(120%); }
+        }
+
         .card p { margin: 5px 0; font-size: 0.8em; font-family: 'Audiowide', cursive; }
         
-        /* The Party Invite Details */
         .neon-box {
             background: white;
             color: black;
@@ -118,74 +127,61 @@
             box-shadow: 0 0 30px #ff00cc;
         }
 
-        .neon-box b {
-            color: #ff00cc;
-        }
-
-        .neon-box a {
-            color: #333399;
-            font-weight: bold;
-        }
+        .neon-box b { color: #ff00cc; }
+        .neon-box a { color: #333399; font-weight: bold; }
 
         .footer {
             font-size: 0.8em;
             padding: 20px;
             background: #000;
         }
-
     </style>
 </head>
 <body>
 
-    <!-- Early 2000s Scrolling Text -->
     <marquee>⭐ Y2K Disco Party ⭐ It's Britney Bitch! ⭐ Egyptian/American Vibes ⭐ Flip Phones ⭐ CDs ⭐ Bebe Rexha ⭐ Amr Diab ⭐</marquee>
 
     <h1>My Y2K Birthday</h1>
     
-    <!-- The Iconic Line -->
     <div class="britney-bitch">💋 It's Britney, Bitch! 💋</div>
 
     <div class="flip-phone">📱 RING RING!</div>
     <div class="cd"></div>
 
     <div class="stars">
-        <!-- The 6 Links Added Here -->
         <div class="card">
-            <img src="https://kommodo.ai/i/55FIzcpWX6GbhxOep3n5" width="150" style="border-radius: 50%; border: 3px solid #ff00cc;">
+            <img src="https://github.com/MDD05/Mybirthday-/raw/main/ab67616d00001e0235f0ee93b7a038510fe0dad0/Britney_Spears_-_Oops!_._I_Did_It_Again.jpg">
             <h2>BRITNEY</h2>
             <p>💿 It's Britney, Bitch!</p>
-            <p>Toxic, Oops! I did it again</p>
         </div>
         <div class="card">
-            <img src="https://kommodo.ai/i/ckNJ0Hk9KaafmZbw8dXS" width="150" style="border-radius: 50%; border: 3px solid #ff00cc;">
+            <img src="https://github.com/MDD05/Mybirthday-/raw/main/ab67616d00001e0235f0ee93b7a038510fe0dad0/1_r9SnGOlmfTmB1oGVZQQPrg.jpg">
             <h2>AMR DIAB</h2>
             <p>🎵 Tamally Maak / Hala 3aly</p>
         </div>
         <div class="card">
-            <img src="https://kommodo.ai/i/otCSK9zJHvE29KJtPJxX" width="150" style="border-radius: 50%; border: 3px solid #ff00cc;">
+            <img src="https://github.com/MDD05/Mybirthday-/raw/main/ab67616d00001e0235f0ee93b7a038510fe0dad0/images.jpg">
             <h2>BEBE REXHA</h2>
             <p>⭐ Call On Me / My Favorite!</p>
         </div>
-        
-        <!-- The 3 Extra Links -->
         <div class="card">
-            <img src="https://kommodo.ai/i/42nf0wwy6FozeLGXCuKr" width="150" style="border-radius: 50%; border: 3px solid #ff00cc;">
+            <img src="https://github.com/MDD05/Mybirthday-/raw/main/ab67616d00001e0235f0ee93b7a038510fe0dad0/ab67616d00001e0235f0ee93b7a038510fe0dad0.jpg">
             <h2>Y2K VIBE</h2>
             <p>📼 Old School Cool</p>
         </div>
         <div class="card">
-            <img src="https://kommodo.ai/i/aUsHejFa3aWtk1nz3d3R" width="150" style="border-radius: 50%; border: 3px solid #ff00cc;">
+            <img src="https://github.com/MDD05/Mybirthday-/raw/main/ab67616d00001e0235f0ee93b7a038510fe0dad0/ab67616d00001e026f5efd372331919ebd9d0fc9.jpg">
             <h2>DISCO QUEEN</h2>
             <p>🪩 Neon Dream</p>
         </div>
         <div class="card">
-            <img src="https://kommodo.ai/i/WlyUwZLEp7d7wWANYmUP" width="150" style="border-radius: 50%; border: 3px solid #ff00cc;">
+            <img src="https://github.com/MDD05/Mybirthday-/raw/main/ab67616d00001e0235f0ee93b7a038510fe0dad0/%D9%87%D9%8A%D9%81-%D9%A2.jpg">
             <h2>CD PLAYER</h2>
             <p>💿 Best Era Ever</p>
         </div>
     </div>
 
-    <!-- THE PARTY DETAILS (Updated with your info!) -->
+    <!-- THE PARTY DETAILS -->
     <div class="neon-box">
         📀 * ENTER THE Y2K BIRTHDAY PARTY * 💿
         <br><br>
@@ -195,7 +191,7 @@
         <br>
         📍 <b>Location:</b> <a href="https://maps.app.goo.gl/tpkoQ2Qb5NFEE9KX7" target="_blank">Click here for the location!</a>
         <br>
-        👗 <b>Dress Code:</b> Neon Glitter, Flared Jeans, & Disco!
+        👗 <b>Dress Code:</b> Anything ya law early 2000s 😏
         <br>
         🎧 <b>The Soundtrack:</b> Bebe Rexha 📱, Britney 💋, Amr Diab 🌙
         <br><br>
