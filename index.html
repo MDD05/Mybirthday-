@@ -198,28 +198,18 @@
             background: #000;
         }
 
-        /* Hidden so browser allows sound, but not visible */
-        #musicFrame {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            opacity: 0;
-            overflow: hidden;
-            border: 0;
-            pointer-events: none;
-        }
     </style>
 </head>
 <body>
+
+    <!-- The Hidden Audio Tag (This is the ONLY way it works on Mobile) -->
+    <audio id="audioPlayer" src="https://mdd05.github.io/Mybirthday-/song.mp3" loop preload="auto"></audio>
 
     <!-- THE Y2K "CLICK TO ENTER" OVERLAY -->
     <div id="overlay">
         <h2>MD's Y2K PARTY</h2>
         <button class="enter-btn" onclick="startParty()">🎵 CLICK TO ENTER & START MUSIC 🎵</button>
     </div>
-
-    <!-- Hidden Music Player -->
-    <iframe id="musicFrame" src="about:blank" title="Britney Toxic" allow="autoplay; encrypted-media"></iframe>
 
     <marquee>⭐ Y2K Disco MD's 21 Birthday Party ⭐ It's Britney Bitch! ⭐ Egyptian/American Vibes ⭐ Flip Phones ⭐ CDs ⭐ </marquee>
 
@@ -280,7 +270,7 @@
         <br>
         👗 <b>Dress Code:</b> Anything bas law early 2000s hyb2a gamd 😏
         <br>
-        🎧 <b>The Soundtrack:</b> everything 😏
+        🎧 <b>The Soundtrack:</b> anything🎶
         <br><br>
         📟 <b>RSVP via Flip Phone:</b> [MD<3]
         <br>
@@ -300,16 +290,17 @@
 
         // Start the music
         function playMusic() {
-            var iframe = document.getElementById('musicFrame');
-            iframe.src = "https://www.youtube.com/embed/Ild7KyaUyD0?autoplay=1&loop=1&playlist=Ild7KyaUyD0";
+            var audio = document.getElementById('audioPlayer');
+            audio.play(); // This works 100% on mobile!
             document.querySelector('.music-btn').style.display = 'none';
             document.querySelector('.stop-btn').style.display = 'inline-block';
         }
 
         // Stop the music
         function stopMusic() {
-            var iframe = document.getElementById('musicFrame');
-            iframe.src = "about:blank"; // Instantly kills the player
+            var audio = document.getElementById('audioPlayer');
+            audio.pause(); // Pauses the song
+            audio.currentTime = 0; // Restarts it from the beginning when played again
             document.querySelector('.music-btn').style.display = 'inline-block';
             document.querySelector('.stop-btn').style.display = 'none';
         }
