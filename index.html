@@ -6,206 +6,49 @@
     <title>Y2K Disco MD's 21 Birthday Party </title>
     <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Audiowide&family=Jomhuria&display=swap" rel="stylesheet">
     <style>
-        /* --- The "Click to Enter" Overlay (The Y2K Trick) --- */
+        /* --- The "Click to Enter" Overlay --- */
         #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: black;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: black; z-index: 9999;
+            display: flex; justify-content: center; align-items: center; flex-direction: column;
         }
-        #overlay h2 {
-            font-family: 'Monoton', cursive;
-            color: #ff00cc;
-            text-shadow: 2px 2px 0px #ffcc00;
-            font-size: 3em;
-        }
+        #overlay h2 { font-family: 'Monoton', cursive; color: #ff00cc; text-shadow: 2px 2px 0px #ffcc00; font-size: 3em; }
         .enter-btn {
-            background: #ff00cc;
-            color: white;
-            border: 5px solid #ffcc00;
-            padding: 20px 40px;
-            border-radius: 50px;
-            font-family: 'Audiowide', cursive;
-            font-size: 1.5em;
-            cursor: pointer;
-            box-shadow: 0 0 30px #ff00cc, 0 0 60px #ffcc00;
+            background: #ff00cc; color: white; border: 5px solid #ffcc00;
+            padding: 20px 40px; border-radius: 50px;
+            font-family: 'Audiowide', cursive; font-size: 1.5em;
+            cursor: pointer; box-shadow: 0 0 30px #ff00cc, 0 0 60px #ffcc00;
             animation: glow-pulse 2s infinite alternate;
         }
 
         /* --- Main Page Styles --- */
-        body {
-            margin: 0;
-            padding: 0;
-            background: radial-gradient(circle at 20% 20%, #ff0099, #333399, #00ccff, #ffcc00);
-            background-size: 400% 400%;
-            animation: glitter 10s ease infinite;
-            color: white;
-            font-family: 'Audiowide', cursive;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        
-        @keyframes glitter {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        marquee {
-            font-family: 'Monoton', cursive;
-            font-size: 2em;
-            color: #ffcc00;
-            background: black;
-            border-bottom: 5px dashed #ff00cc;
-            padding: 10px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 0px #ff00cc;
-        }
-
-        h1 {
-            font-family: 'Monoton', cursive;
-            font-size: 3em;
-            text-shadow: 4px 4px 0px #ff00cc, 8px 8px 0px #00ccff;
-            margin-bottom: 10px;
-        }
-
-        .britney-bitch {
-            font-family: 'Monoton', cursive;
-            font-size: 1.8em;
-            color: #ff00cc;
-            text-shadow: 2px 2px 0px #ffcc00;
-            margin-bottom: 20px;
-            animation: blink 1s step-end infinite;
-        }
+        body { margin: 0; padding: 0; background: radial-gradient(circle at 20% 20%, #ff0099, #333399, #00ccff, #ffcc00); background-size: 400% 400%; animation: glitter 10s ease infinite; color: white; font-family: 'Audiowide', cursive; text-align: center; overflow-x: hidden; }
+        @keyframes glitter { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        marquee { font-family: 'Monoton', cursive; font-size: 2em; color: #ffcc00; background: black; border-bottom: 5px dashed #ff00cc; padding: 10px; margin-bottom: 20px; text-shadow: 2px 2px 0px #ff00cc; }
+        h1 { font-family: 'Monoton', cursive; font-size: 3em; text-shadow: 4px 4px 0px #ff00cc, 8px 8px 0px #00ccff; margin-bottom: 10px; }
+        .britney-bitch { font-family: 'Monoton', cursive; font-size: 1.8em; color: #ff00cc; text-shadow: 2px 2px 0px #ffcc00; margin-bottom: 20px; animation: blink 1s step-end infinite; }
         @keyframes blink { 50% { opacity: 0; } }
-
-        .music-btn {
-            background: #ff00cc;
-            color: white;
-            border: 4px solid #ffcc00;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-family: 'Audiowide', cursive;
-            font-size: 1.2em;
-            cursor: pointer;
-            box-shadow: 0 0 20px #ff00cc, 0 0 40px #ffcc00;
-            margin-bottom: 20px;
-            margin-right: 10px;
-            animation: glow-pulse 2s infinite alternate;
-        }
-
-        .stop-btn {
-            background: #00ccff;
-            color: black;
-            border: 4px solid #ff00cc;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-family: 'Audiowide', cursive;
-            font-size: 1.2em;
-            cursor: pointer;
-            box-shadow: 0 0 20px #00ccff, 0 0 40px #ff00cc;
-            margin-bottom: 20px;
-            margin-left: 10px;
-        }
-
-        .cd {
-            width: 150px;
-            height: 150px;
-            background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);
-            border-radius: 50%;
-            margin: 20px auto;
-            animation: spin 3s linear infinite;
-            box-shadow: 0 0 20px #fff, 0 0 40px #ff00cc;
-        }
+        .music-btn { background: #ff00cc; color: white; border: 4px solid #ffcc00; padding: 15px 30px; border-radius: 50px; font-family: 'Audiowide', cursive; font-size: 1.2em; cursor: pointer; box-shadow: 0 0 20px #ff00cc, 0 0 40px #ffcc00; margin-bottom: 20px; margin-right: 10px; animation: glow-pulse 2s infinite alternate; }
+        .stop-btn { background: #00ccff; color: black; border: 4px solid #ff00cc; padding: 15px 30px; border-radius: 50px; font-family: 'Audiowide', cursive; font-size: 1.2em; cursor: pointer; box-shadow: 0 0 20px #00ccff, 0 0 40px #ff00cc; margin-bottom: 20px; margin-left: 10px; }
+        .cd { width: 150px; height: 150px; background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); border-radius: 50%; margin: 20px auto; animation: spin 3s linear infinite; box-shadow: 0 0 20px #fff, 0 0 40px #ff00cc; }
         @keyframes spin { 100% { transform: rotate(360deg); } }
-
-        .flip-phone {
-            background: silver;
-            color: black;
-            width: 120px;
-            height: 40px;
-            border-radius: 20px;
-            border-bottom: 3px solid #ff00cc;
-            margin: 20px auto;
-            padding: 10px;
-            font-weight: bold;
-            transform: rotate(-10deg);
-            box-shadow: 0 10px 10px rgba(0,0,0,0.5);
-        }
-
-        .stars {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 30px 0;
-        }
-
-        .card {
-            background: rgba(0, 0, 0, 0.7);
-            border: 3px solid #00ffcc;
-            border-radius: 15px;
-            padding: 20px;
-            width: 180px;
-            box-shadow: 0 0 20px #00ccff;
-            font-family: 'Jomhuria', cursive;
-            font-size: 1.5em;
-        }
-
-        .card img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #ff00cc;
-            box-shadow: 0 0 15px #ff00cc, 0 0 30px #ff00cc;
-            filter: saturate(180%) contrast(110%) drop-shadow(0 0 5px #00ccff);
-            animation: glow-pulse 2s infinite alternate;
-        }
-
-        @keyframes glow-pulse {
-            from { box-shadow: 0 0 10px #ff00cc; filter: saturate(150%) contrast(100%); }
-            to { box-shadow: 0 0 30px #00ccff, 0 0 40px #ff00cc; filter: saturate(220%) contrast(120%); }
-        }
-
+        .flip-phone { background: silver; color: black; width: 120px; height: 40px; border-radius: 20px; border-bottom: 3px solid #ff00cc; margin: 20px auto; padding: 10px; font-weight: bold; transform: rotate(-10deg); box-shadow: 0 10px 10px rgba(0,0,0,0.5); }
+        .stars { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 30px 0; }
+        .card { background: rgba(0, 0, 0, 0.7); border: 3px solid #00ffcc; border-radius: 15px; padding: 20px; width: 180px; box-shadow: 0 0 20px #00ccff; font-family: 'Jomhuria', cursive; font-size: 1.5em; }
+        .card img { width: 150px; height: 150px; object-fit: cover; border-radius: 50%; border: 3px solid #ff00cc; box-shadow: 0 0 15px #ff00cc, 0 0 30px #ff00cc; filter: saturate(180%) contrast(110%) drop-shadow(0 0 5px #00ccff); animation: glow-pulse 2s infinite alternate; }
+        @keyframes glow-pulse { from { box-shadow: 0 0 10px #ff00cc; filter: saturate(150%) contrast(100%); } to { box-shadow: 0 0 30px #00ccff, 0 0 40px #ff00cc; filter: saturate(220%) contrast(120%); } }
         .card p { margin: 5px 0; font-size: 0.8em; font-family: 'Audiowide', cursive; }
-        
-        .neon-box {
-            background: white;
-            color: black;
-            border: 10px solid #ff00cc;
-            padding: 20px;
-            margin: 40px;
-            font-family: 'Jomhuria', cursive;
-            font-size: 2em;
-            line-height: 1.4;
-            box-shadow: 0 0 30px #ff00cc;
-        }
-
+        .neon-box { background: white; color: black; border: 10px solid #ff00cc; padding: 20px; margin: 40px; font-family: 'Jomhuria', cursive; font-size: 2em; line-height: 1.4; box-shadow: 0 0 30px #ff00cc; }
         .neon-box b { color: #ff00cc; }
         .neon-box a { color: #333399; font-weight: bold; }
-
-        .footer {
-            font-size: 0.8em;
-            padding: 20px;
-            background: #000;
-        }
-
+        .footer { font-size: 0.8em; padding: 20px; background: #000; }
     </style>
 </head>
 <body>
 
-    <!-- The Hidden Audio Tag (This is the ONLY way it works on Mobile) -->
-    <audio id="audioPlayer" src="https://mdd05.github.io/Mybirthday-/song.mp3" loop preload="auto"></audio>
+    <!-- Hidden Audio Tag (MP3 works perfectly on Mobile) -->
+    <audio id="audioPlayer" src="https://mdd05.github.io/Mybirthday-/It%27s%20Britney%20Bitch%20Sound%20Effect.mp3" loop preload="auto"></audio>
 
-    <!-- THE Y2K "CLICK TO ENTER" OVERLAY -->
     <div id="overlay">
         <h2>MD's Y2K PARTY</h2>
         <button class="enter-btn" onclick="startParty()">🎵 CLICK TO ENTER & START MUSIC 🎵</button>
@@ -214,93 +57,55 @@
     <marquee>⭐ Y2K Disco MD's 21 Birthday Party ⭐ It's Britney Bitch! ⭐ Egyptian/American Vibes ⭐ Flip Phones ⭐ CDs ⭐ </marquee>
 
     <h1>Y2K Disco MD's 21 Birthday Party</h1>
-    
     <div class="britney-bitch">💋 It's Britney, Bitch! 💋</div>
 
     <div class="flip-phone">📱 RING RING!</div>
     <div class="cd"></div>
 
-    <!-- MUSIC CONTROLS -->
     <div style="margin-bottom: 20px;">
         <button class="music-btn" onclick="playMusic()">🎵 PLAY THE VIBE 🎵</button>
         <button class="stop-btn" onclick="stopMusic()" style="display:none;">⏹️ STOP THE VIBE ⏹️</button>
     </div>
 
     <div class="stars">
-        <div class="card">
-            <img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/Britney_Spears_-_Oops!_._I_Did_It_Again.jpg">
-            <h2>BRITNEY</h2>
-            <p>💿 It's Britney, Bitch!</p>
-        </div>
-        <div class="card"> 
-            <img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/ab67616d00001e0235f0ee93b7a038510fe0dad0.jpg">
-            <h2>AMR DIAB</h2>
-            <p>🎵 Tamally Maak / Hala 3aly</p>
-        </div>
-        <div class="card">
-             <img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/1_r9SnGOlmfTmB1oGVZQQPrg.jpg">
-            <h2>BEBE REXHA</h2>
-            <p>⭐ everything 😏 / </p>
-        </div>
-        <div class="card">
-            <img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/images.jpg">   
-            <h2>Y2K VIBE</h2>
-            <p>📼 Old School Cool</p>
-        </div>
-        <div class="card">
-            <img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/ab67616d00001e026f5efd372331919ebd9d0fc9.jpg">
-            <h2>DISCO QUEEN</h2>
-            <p>🪩 Neon Dream</p>
-        </div>
-        <div class="card">
-            <img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/%D9%87%D9%8A%D9%81-%D9%A2.jpg">
-            <h2>CD PLAYER</h2>
-            <p>💿 Best Era Ever</p>
-        </div>
+        <div class="card"><img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/Britney_Spears_-_Oops!_._I_Did_It_Again.jpg"><h2>BRITNEY</h2><p>💿 It's Britney, Bitch!</p></div>
+        <div class="card"><img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/ab67616d00001e0235f0ee93b7a038510fe0dad0.jpg"><h2>AMR DIAB</h2><p>🎵 Tamally Maak / Hala 3aly</p></div>
+        <div class="card"><img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/1_r9SnGOlmfTmB1oGVZQQPrg.jpg"><h2>BEBE REXHA</h2><p>⭐ everything 😏 / </p></div>
+        <div class="card"><img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/images.jpg"><h2>Y2K VIBE</h2><p>📼 Old School Cool</p></div>
+        <div class="card"><img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/ab67616d00001e026f5efd372331919ebd9d0fc9.jpg"><h2>DISCO QUEEN</h2><p>🪩 Neon Dream</p></div>
+        <div class="card"><img src="https://mdd05.github.io/Mybirthday-/ab67616d00001e0235f0ee93b7a038510fe0dad0/%D9%87%D9%8A%D9%81-%D9%A2.jpg"><h2>CD PLAYER</h2><p>💿 Best Era Ever</p></div>
     </div>
 
     <div class="neon-box">
-        📀 * early 2000s theme * 💿
-        <br><br>
-        📅 <b>Date:</b> Friday, September 18th
-        <br>
-        ⏰ <b>Time:</b> 5:00 PM
-        <br>
-        📍 <b>Location:</b> <a href="https://maps.app.goo.gl/tpkoQ2Qb5NFEE9KX7" target="_blank">Click here for the location!</a>
-        <br>
-        👗 <b>Dress Code:</b> Anything bas law early 2000s hyb2a gamd 😏
-        <br>
-        🎧 <b>The Soundtrack:</b> anything🎶
-        <br><br>
-        📟 <b>RSVP via Flip Phone:</b> [MD<3]
-        <br>
+        📀 * early 2000s theme * 💿<br><br>
+        📅 <b>Date:</b> Friday, September 18th<br>
+        ⏰ <b>Time:</b> 5:00 PM<br>
+        📍 <b>Location:</b> <a href="https://maps.app.goo.gl/tpkoQ2Qb5NFEE9KX7" target="_blank">Click here for the location!</a><br>
+        👗 <b>Dress Code:</b> Anything bas law early 2000s hyb2a gamd 😏<br>
+        🎧 <b>The Soundtrack:</b> everything 😏<br><br>
+        📟 <b>RSVP via Flip Phone:</b> [MD<3]<br>
         *No CDs required, just bring your best dance moves!*
     </div>
 
-    <div class="footer">
-        Made with 💖 for the best Y2K bday!
-    </div>
+    <div class="footer">Made with 💖 for the best Y2K bday!</div>
 
     <script>
-        // This function is called when they click the "ENTER" screen
         function startParty() {
-            document.getElementById('overlay').style.display = 'none'; // Hide the overlay
-            playMusic(); // Start the music instantly
+            document.getElementById('overlay').style.display = 'none';
+            playMusic();
         }
 
-        // Start the music
         function playMusic() {
             var audio = document.getElementById('audioPlayer');
-            audio.play(); // This works 100% on mobile!
+            audio.play(); 
             document.querySelector('.music-btn').style.display = 'none';
             document.querySelector('.stop-btn').style.display = 'inline-block';
         }
 
-        // Stop the music
         function stopMusic() {
             var audio = document.getElementById('audioPlayer');
-            audio.pause(); // Pauses the song
-            audio.currentTime = 0; // Restarts it from the beginning when played again
+            audio.pause(); 
+            audio.currentTime = 0;
             document.querySelector('.music-btn').style.display = 'inline-block';
             document.querySelector('.stop-btn').style.display = 'none';
         }
