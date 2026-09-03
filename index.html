@@ -52,6 +52,21 @@
         }
         @keyframes blink { 50% { opacity: 0; } }
 
+        /* Music Button Style */
+        .music-btn {
+            background: #ff00cc;
+            color: white;
+            border: 4px solid #ffcc00;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 0 20px #ff00cc, 0 0 40px #ffcc00;
+            margin-bottom: 20px;
+            animation: glow-pulse 2s infinite alternate;
+        }
+
         .cd {
             width: 150px;
             height: 150px;
@@ -137,6 +152,21 @@
     </style>
 </head>
 <body>
+
+    <!-- Hidden Autoplay Attempt (Browsers usually block this) -->
+    <iframe style="display:none; width:0; height:0; border:0;" src="https://www.youtube.com/embed/Ild7KyaUyD0?autoplay=1&loop=1&playlist=Ild7KyaUyD0" title="Britney Toxic" allow="autoplay; encrypted-media"></iframe>
+
+    <!-- MUSIC BUTTON (In case browser blocks autoplay) -->
+    <button class="music-btn" onclick="playMusic()">🎵 CLICK TO PLAY THE Y2K VIBE 🎵</button>
+
+    <script>
+        function playMusic() {
+            var iframe = document.querySelector('iframe');
+            iframe.src = "https://www.youtube.com/embed/Ild7KyaUyD0?autoplay=1&loop=1&playlist=Ild7KyaUyD0";
+            // Hide the button after clicking so it looks clean
+            document.querySelector('.music-btn').style.display = 'none';
+        }
+    </script>
 
     <marquee>⭐ Y2K Disco MD's 21 Birthday Party ⭐ It's Britney Bitch! ⭐ Egyptian/American Vibes ⭐ Flip Phones ⭐ CDs ⭐ </marquee>
 
