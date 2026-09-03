@@ -1,27 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Birthday</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-            background-color: #f0f0f0;
-        }
-        h1 {
-            color: #333;
-        }
-        p {
-            font-size: 20px;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 MAYA'S 21st – PHARAOH RAVE 🔥</title>
+  <!-- Y2K Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Press+Start+2P&family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    /* ---- RESET & GLOBAL ---- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" viewBox="0 0 24 32"><polygon points="2,2 20,12 12,20" fill="%23ff00ff" /><circle cx="18" cy="8" r="4" fill="%23ffcc00" /></svg>') 4 4, auto;
+    }
+
+    body {
+      background: #1a0a1e;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Press Start 2P', cursive;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* ---- SAND + GLITTER BG ---- */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 30%, #f2c94c 0%, #d4a017 30%, #8b5a2b 60%, #1a0a1e 100%);
+      opacity: 0.3;
+      z-index: 0;
+    }
+
+    body::after {
+      content: '✨💎✨💎✨💎✨💎✨💎✨💎✨💎✨💎✨💎✨💎✨';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 40px;
+      letter-spacing: 30px;
+      color: rgba(255, 215, 0, 0.08);
+      z-index: 0;
+      pointer-events: none;
+      animation: sparkleDrift 20s linear infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    @keyframes sparkleDrift {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-100%) rotate(360deg); }
+    }
+
+    /* ---- MAIN CARD (like a MySpace profile) ---- */
+    .invite-card {
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+      width: 100%;
+      background: rgba(255, 242, 204, 0.92);
+      border: 8px double #ffcc00;
+      box-shadow: 0 0 0 6px #b8860b, 0 0 0 12px #ff00ff, 0 0 40px rgba(255, 0, 255, 0.6);
+      padding: 30px 25px;
+      border-radius: 40px 10px 40px 10px;
+      text-align: center;
+      transition: all 0.3s;
+      animation: borderGlow 1.5s infinite alternate;
+    }
+
+    @keyframes borderGlow {
+      0% { box-shadow: 0 0 0 6px #b8860b, 0 0 0 12px #ff00ff, 0 0 40px #ff00ff; }
+      100% { box-shadow: 0 0 0 6px #ffcc00, 0 0 0 12px #00ffff, 0 0 60px #00ffff; }
+    }
+
+    /* ---- BLINK / MARQUEE / GLITCH ---- */
+    .blink {
+      animation: blink 0.8s step-end infinite;
+      color: #ff00ff;
+      font-size: 1.2rem;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    marquee {
+      background: #000;
+      color: #0ff;
+      font-family: 'Bangers', cursive;
+      font-size: 2.2rem;
+      letter-spacing: 6px;
+      padding: 8px 0;
+      border: 3px ridge #ff00ff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #0ff, 0 0 20px #f0f;
+    }
+
+    /* ---- PYRAMID + SKYLINE (CSS art) ---- */
+    .fusion-art {
+      display: flex;
+      justify-content: space-around;
+      align-items: flex-end;
+      margin: 20px 0 25px;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .pyramid {
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 80px solid #d4a017;
+      filter: drop-shadow(0 0 15px #ffaa00);
+      position: relative;
+    }
+    .pyramid::after {
+      content: '🏜️';
+      position: absolute;
+      bottom: -40px;
+      left: -20px;
+      font-size: 30px;
+      filter: drop-shadow(0 0 5px gold);
+    }
+    .pyramid-small {
+      border-left-width: 35px;
+      border-right-width: 35px;
+      border-bottom-width: 50px;
+      border-bottom-color: #b8860b;
+    }
+
+    .skyline {
+      display: flex;
+      align-items: flex-end;
+      gap: 4px;
+      height: 80px;
+      filter: drop-shadow(0 0 10px #0ff);
+    }
+    .building {
+      background: #2a2a2a;
+      border: 2px solid #0ff;
+      width: 25px;
+      height: 40px;
+      box-shadow: inset -3px 0 0 #ff00ff, inset 3px 0 0 #ff00ff;
+    }
+    .b1 { height: 60px; }
+    .b2 { height: 80px; background: #1a1a3a; }
+    .b3 { height: 45px; }
+    .b4 { height: 70px; background: #3a1a1a; }
+    .b5 { height: 90px; }
+    .statue {
+      font-size: 50px;
+      line-height: 1;
+      margin-left: 5px;
+      filter: drop-shadow(0 0 15px #0f0);
+    }
+
+    /* ---- TITLE ---- */
+    .main-title {
+      font-family: 'Bangers', cursive;
+      font-size: 4rem;
+      letter-spacing: 5px;
+      background: linear-gradient(45deg, #ff00ff, #ffcc00, #00ffff, #ff00ff);
+      background-size: 300% 300%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientMove 2s ease infinite;
+      text-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+      line-height: 1.2;
+      margin: 5px 0;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .sub-title {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.8rem;
+      color: #b8860b;
+      text-shadow: 3px 3px 0 #ff00ff, -3px -3px 0 #00ffff;
+      letter-spacing: 3px;
+      margin-top: -10px;
+    }
+
+    /* ---- INVITATION TEXT (early 2000s web style) ---- */
+    .invite-text {
+      background: rgba(0, 0, 0, 0.7);
+      border: 4px groove #ffcc00;
+      padding: 25px 20px;
+      margin: 25px 0;
+      color: #f0f0f0;
+      font-size: 0.7rem;
+      line-height: 2;
+      text-align: left;
+      border-radius: 20px 0 20px 0;
+      box-shadow: inset 0 0 30px rgba(255, 215, 0, 0.2);
+    }
+    .invite-text .highlight {
+      color: #ff00ff;
+      font-weight: bold;
+      text-shadow: 0 0 10px #ff00ff;
+    }
+    .invite-text .gold {
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00;
+    }
+    .invite-text .cyan {
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff;
+    }
+    .invite-text .big {
+      font-size: 1.4rem;
+      font-family: 'Bangers', cursive;
+      letter-spacing: 2px;
+    }
+
+    /* ---- DRIP CODE BOX ---- */
+    .drip-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .drip-option {
+      background: #1a0a1e;
+      border: 3px double #ff00ff;
+      padding: 15px 12px;
+      flex: 1 1 180px;
+      border-radius: 30px 0 30px 0;
+      color: #fff;
+      font-size: 0.55rem;
+      line-height: 1.8;
+      box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+    }
+    .drip-option .label {
+      display: block;
+      font-family: 'Bangers', cursive;
+      font-size: 1.2rem;
+      color: #ffcc00;
+      letter-spacing: 2px;
+      border-bottom: 2px dotted #ff00ff;
+      padding-bottom: 5px;
+      margin-bottom: 8px;
+    }
+
+    /* ---- RSVP BUTTON ---- */
+    .rsvp-link {
+      display: inline-block;
+      background: #000;
+      color: #ffcc00;
+      font-family: 'Bangers', cursive;
+      font-size: 2.2rem;
+      padding: 18px 50px;
+      border: 6px ridge #ff00ff;
+      border-radius: 60px 10px 60px 10px;
+      text-decoration: none;
+      text-shadow: 0 0 20px #ffcc00;
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+      transition: 0.2s;
+      letter-spacing: 4px;
+      margin: 15px 0 5px;
+    }
+    .rsvp-link:hover {
+      transform: scale(1.05);
+      background: #ff00ff;
+      color: #000;
+      border-color: #00ffff;
+      box-shadow: 0 0 60px #ff00ff;
+    }
+
+    /* ---- UNDER CONSTRUCTION (mandatory Y2K) ---- */
+    .under-construction {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 25px;
+      padding: 10px;
+      background: #000;
+      border: 3px dashed #ffcc00;
+      color: #ffcc00;
+      font-size: 0.5rem;
+      font-family: 'Press Start 2P', cursive;
+      border-radius: 20px;
+    }
+    .under-construction span {
+      font-size: 2rem;
+      animation: spin 3s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* ---- counters / hits (fake) ---- */
+    .hit-counter {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 0.6rem;
+      background: #222;
+      color: #0f0;
+      padding: 5px 15px;
+      border: 2px solid #0f0;
+      display: inline-block;
+      margin-top: 10px;
+      letter-spacing: 3px;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 600px) {
+      .main-title { font-size: 2.8rem; }
+      .sub-title { font-size: 1.2rem; }
+      marquee { font-size: 1.4rem; }
+      .invite-text { font-size: 0.55rem; padding: 15px; }
+      .rsvp-link { font-size: 1.6rem; padding: 12px 30px; }
+      .fusion-art { flex-direction: column; align-items: center; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Mybirthday-</h1>
-    <p>Write your birthday wishes here!</p>
+
+  <div class="invite-card">
+
+    <!-- TOP MARQUEE -->
+    <marquee behavior="scroll" direction="left" scrollamount="8">
+      🏜️✨  U R  I N V I T E D  ✨🏜️ &nbsp;&nbsp;|&nbsp;&nbsp; 21st  &nbsp;|&nbsp;&nbsp; MAYA DIAB  &nbsp;|&nbsp;&nbsp; PHARAOH RAVE  &nbsp;|&nbsp;&nbsp; 🗽💎
+    </marquee>
+
+    <!-- Y2K GLITTER TITLE -->
+    <div class="main-title">🔥 MAYA'S 21st 🔥</div>
+    <div class="sub-title">𓂀 PHARAOH x Y2K RAVE 𓂀</div>
+
+    <!-- ART: PYRAMID + SKYLINE -->
+    <div class="fusion-art">
+      <div class="pyramid"></div>
+      <div class="pyramid pyramid-small"></div>
+      <div class="skyline">
+        <div class="building b1"></div>
+        <div class="building b2"></div>
+        <div class="building b3"></div>
+        <div class="building b4"></div>
+        <div class="building b5"></div>
+        <div class="statue">🗽</div>
+      </div>
+    </div>
+
+    <!-- INVITATION TEXT (styled like early web) -->
+    <div class="invite-text">
+      <div style="text-align:center; font-size:1rem; margin-bottom:15px;">
+        <span class="blink">👇</span> <span class="gold big">SCROLL 4 DA TEA</span> <span class="blink">👇</span>
+      </div>
+
+      <p><span class="highlight big">AYE YO!</span></p>
+      <p>It's ya girl <span class="highlight">MAYA DIAB</span> <span style="font-size:1.2rem;">👋</span>, born in '05, and I'm finally turning the big <span class="gold">2-1</span>!</p>
+      <p style="margin:12px 0;">You are officially summoned to the <span class="cyan">Pharaoh's Rave</span> — where the Nile meets the NYC block. We're blending <span class="gold">Ancient Egypt</span> with <span class="highlight">Y2K Swagger</span>.</p>
+
+      <!-- UPDATED DATE & TIME -->
+      <p>📅 <span class="gold">DATE:</span> <strong>FRIDAY, SEPTEMBER 18, 2026 (18/9)</strong></p>
+      <p>⏰ <span class="gold">TIME:</span> <strong>5:00 PM</strong> <span style="color:#ff00ff;">(Don't be late, or you'll miss the champagne pyramid!)</span></p>
+      <p>📍 <span class="gold">LOCATION:</span> <strong>[Insert Address]</strong> <span style="color:#00ffff;">(Secret spot—think desert vibes, city lights)</span></p>
+
+      <div class="drip-box">
+        <div class="drip-option">
+          <span class="label">✨ Y2K PRINCESS</span>
+          Low-rise denim, velour tracksuits, butterfly clips, glitter gloss.
+        </div>
+        <div class="drip-option">
+          <span class="label">🏛️ EGYPTIAN ROYALTY</span>
+          Gold accents, kohl-rimmed eyes, linen fits, or full Cleopatra energy.
+        </div>
+        <div class="drip-option" style="border-color:#00ffff;">
+          <span class="label" style="color:#00ffff;">🔥 BOTH</span>
+          Mix a Pharaoh headdress with a Juicy Couture tracksuit. We love a crossover!
+        </div>
+      </div>
+
+      <p style="margin:15px 0 10px;"><span class="gold">WHAT 2 EXPECT:</span></p>
+      <p>🎧 <em>Exclusively</em> 2000s hits (Beyoncé, 50 Cent, Shakira, &amp; Arabic remixes).</p>
+      <p>🥤 <span class="cyan">"The Tut-Tini"</span> (The signature 21+ drink—shaken, not stirred).</p>
+      <p>📸 A <span class="highlight">Nokia-style</span> photo booth (blurry pics only).</p>
+      <p>🐪 Camel races on the big screen (because why not?).</p>
+
+      <p style="margin:20px 0 10px;"><span class="gold">RSVP:</span></p>
+      <p>Text me or hit the link below by <strong>September 10, 2026</strong> so I know how many pitas to order.</p>
+      <p style="margin-top:10px; text-align:center; font-size:0.6rem; color:#aaa;">
+        <em>Don't make me send Anubis after you.</em>
+      </p>
+      <p style="text-align:center; font-size:0.8rem; margin-top:5px;">
+        <span class="blink">BE THERE OR BE SQUARE.</span> (But like, a really cool pyramid-shaped square).
+      </p>
+    </div>
+
+    <!-- THE BIG RSVP LINK BUTTON -->
+    <a href="#" class="rsvp-link" onclick="alert('🔥 YAS MAYA! 🔥 Drop your RSVP in the group chat or DM!'); return false;">
+      👉 CLICK 2 RSVP 👈
+    </a>
+    <p style="font-size:0.5rem; color:#666; margin-top:5px;">
+      * or just text Maya directly, she's old school like that *
+    </p>
+
+    <!-- FAKE HIT COUNTER (Y2K mandatory) -->
+    <div class="hit-counter">
+      🖥️ HITS: 000021 &nbsp;|&nbsp; 🎂 21 &nbsp;|&nbsp; 𓂀
+    </div>
+
+    <!-- UNDER CONSTRUCTION GIF -->
+    <div class="under-construction">
+      <span>🚧</span>
+      UNDER CONSTRUCTION (just like my liver after this party)
+      <span>🚧</span>
+    </div>
+
+    <p style="margin-top:18px; font-size:0.45rem; color:#888; font-family:'Press Start 2P', cursive;">
+      ✦ Best viewed on Internet Explorer 6.0 at 800x600 ✦
+    </p>
+
+  </div>
+
 </body>
 </html>
