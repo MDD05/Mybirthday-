@@ -52,7 +52,7 @@
         }
         @keyframes blink { 50% { opacity: 0; } }
 
-        /* Music Button Style */
+        /* Music Buttons Style */
         .music-btn {
             background: #ff00cc;
             color: white;
@@ -64,7 +64,22 @@
             cursor: pointer;
             box-shadow: 0 0 20px #ff00cc, 0 0 40px #ffcc00;
             margin-bottom: 20px;
+            margin-right: 10px;
             animation: glow-pulse 2s infinite alternate;
+        }
+
+        .stop-btn {
+            background: #00ccff;
+            color: black;
+            border: 4px solid #ff00cc;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-family: 'Audiowide', cursive;
+            font-size: 1.2em;
+            cursor: pointer;
+            box-shadow: 0 0 20px #00ccff, 0 0 40px #ff00cc;
+            margin-bottom: 20px;
+            margin-left: 10px;
         }
 
         .cd {
@@ -154,17 +169,27 @@
 <body>
 
     <!-- Hidden Autoplay Attempt (Browsers usually block this) -->
-    <iframe style="display:none; width:0; height:0; border:0;" src="https://www.youtube.com/embed/Ild7KyaUyD0?autoplay=1&loop=1&playlist=Ild7KyaUyD0" title="Britney Toxic" allow="autoplay; encrypted-media"></iframe>
+    <iframe id="musicFrame" style="display:none; width:0; height:0; border:0;" src="https://www.youtube.com/embed/Ild7KyaUyD0?autoplay=1&loop=1&playlist=Ild7KyaUyD0" title="Britney Toxic" allow="autoplay; encrypted-media"></iframe>
 
-    <!-- MUSIC BUTTON (In case browser blocks autoplay) -->
-    <button class="music-btn" onclick="playMusic()">🎵 CLICK TO PLAY THE Y2K VIBE 🎵</button>
+    <!-- MUSIC CONTROLS -->
+    <div style="margin-bottom: 20px;">
+        <button class="music-btn" onclick="playMusic()">🎵 PLAY THE VIBE 🎵</button>
+        <button class="stop-btn" onclick="stopMusic()">⏹️ STOP THE VIBE ⏹️</button>
+    </div>
 
     <script>
         function playMusic() {
-            var iframe = document.querySelector('iframe');
+            var iframe = document.getElementById('musicFrame');
             iframe.src = "https://www.youtube.com/embed/Ild7KyaUyD0?autoplay=1&loop=1&playlist=Ild7KyaUyD0";
-            // Hide the button after clicking so it looks clean
             document.querySelector('.music-btn').style.display = 'none';
+            document.querySelector('.stop-btn').style.display = 'inline-block';
+        }
+
+        function stopMusic() {
+            var iframe = document.getElementById('musicFrame');
+            iframe.src = ""; // This kills the player and stops the sound instantly
+            document.querySelector('.music-btn').style.display = 'inline-block';
+            document.querySelector('.stop-btn').style.display = 'none';
         }
     </script>
 
